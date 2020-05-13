@@ -1,0 +1,34 @@
+<hr>
+<div class="container-lg">
+
+    <h1>
+        Cuales son los síntomas del Covid-19?
+    </h1>
+    <hr>
+    <a>
+        Los síntomas más comunes de la COVID‑19 son fiebre, tos seca y cansancio.
+        Algunos pacientes pueden presentar dolores, congestión nasal, dolor de garganta o diarrea.
+        Estos síntomas suelen ser leves y aparecen de forma gradual. Algunas personas se infectan pero solo presentan síntomas muy leves.
+        La mayoría de las personas (alrededor del 80%) se recuperan de la enfermedad sin necesidad de tratamiento hospitalario. 
+        Alrededor de 1 de cada 5 personas que contraen la COVID‑19 desarrolla una enfermedad grave y tiene dificultad para respirar.
+        Las personas mayores y las que padecen afecciones médicas subyacentes, como hipertensión arterial, problemas cardiacos o pulmonares, diabetes o cáncer tienen más probabilidades de desarrollar una enfermedad grave.
+        Sin embargo, cualquier persona puede contraer la COVID‑19 y desarrollar una enfermedad grave.
+        Incluso las personas con síntomas muy leves de COVID‑19 pueden transmitir el virus.
+        Las personas de todas las edades que tengan fiebre, tos y dificultad para respirar deben buscar atención médica.
+        
+    </a>
+    <strong>Cuando una persona se infecta con el virus, los síntomas tardan en aparecer en término medio de 5 a 6 días, pero pueden tardar hasta 14 días.</strong>
+    <hr>
+    <a class="btn btn-danger btn-block " (click)="validar=!validar">Mostrar/Ocultar</a>
+    <hr>
+    <div class=" card-columns m-auto animated fadeIn ">
+        <div class="card" style="width: 18rem;" *ngFor="let s of sintomasDescripcion;let i=index; ">
+            <img src="assets/img/{{imagenes[i]}}.png" class="card-img-top ">
+            <div class="card-body ">
+                <h5 class="card-title text-center ">{{sintomas[i]}}</h5>
+                <p class="card-text " *ngIf="validar">{{s}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

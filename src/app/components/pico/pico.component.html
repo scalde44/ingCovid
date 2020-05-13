@@ -1,0 +1,85 @@
+<hr>
+<div class="container">
+    <div class="form-group">
+        <h1>Como funciona el pico y cedula en Santiago de Cali</h1>
+        <h5>
+            Para saber cómo te aplica el pico y cédula siga los siguientes pasos:
+        </h5>
+        <a>
+            En la primera sección selecciona el último dígito de tu cédula, después selecciona el último dígito de tu placa.
+            En la parte inferior encontrarás en verde los días que puedes salir y la especificación de si puedes o no usar tu vehículo.
+            En rojo apareceran los dias que debess quedarte en casa.
+        </a>
+        <hr>
+        <label for="selectCedula">
+                <img src="assets/img/identidad.png" alt="" width="30" height="30">
+                Último dígito de la cédula
+            </label>
+        <select class="form-control" id="selectCedula" [(ngModel)]="cedula" (change)="metodo()">
+                <option value=-1>-</option>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+            </select>
+    </div>
+    <div class="form-group">
+        <label for="selectPlaca">
+                <img src="assets/img/carro.png" alt="" width="30" height="30">
+                Último dígito de la placa de tu automóvil
+            </label>
+        <select class="form-control" id="selectPlaca" [(ngModel)]="placa" (change)="metodo()">
+                <option value=-1>-</option>
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+            </select>
+    </div>
+    <div class=" card-columns m-7 animated fadeIn ">
+        <div *ngFor="let d of dias ">
+            <div *ngIf="d.nSalir==true " class="card text-white bg-danger mb-3 ">
+                <div class="card-header ">{{d.dia}}</div>
+                <div class="card-body ">
+                    <h5 class="card-title text-center ">
+                        <img src="assets/img/covid19.png" alt="" width="30" height="30"> Quedate en casa
+                    </h5>
+                </div>
+            </div>
+            <div *ngIf="d.sNormal==true " class="card text-white bg-success mb-3 ">
+                <div class="card-header ">{{d.dia}}</div>
+                <div class="card-body ">
+                    <h5 class="card-title text-center ">
+                        <img src="assets/img/carro.png" alt="" width="30" height="30"> Puedes salir con tu vehículo</h5>
+                </div>
+            </div>
+            <div *ngIf="d.sSinCarro==true " class="card text-white bg-warning mb-3 ">
+                <div class="card-header ">{{d.dia}}</div>
+                <div class="card-body ">
+                    <h5 class="card-title  text-center ">
+                        <img src="assets/img/carro.png" alt="" width="30" height="30"> Puedes salir con tu vehículo en ciertas horas</h5>
+                </div>
+            </div>
+            <div *ngIf="d.salida==true " class="card text-white bg-success mb-3 ">
+                <div class="card-header ">{{d.dia}}</div>
+                <div class="card-body ">
+                    <h5 class="card-title text-center ">
+                        <img src="assets/img/fine.png" alt="" width="30" height="30"> Puedes salir</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

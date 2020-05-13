@@ -1,0 +1,110 @@
+<app-loading *ngIf="cargando==true"></app-loading>
+<hr>
+<div class="text-center">
+    <img src="assets/img/Coronavirus19.jpg" class="img-fluid" alt="Responsive image">
+
+</div>
+<hr>
+<div class="container-lg">
+    <div class="row-2">
+
+        <h1>
+            Que es el coronavirus?
+        </h1>
+        <a>
+                Los coronavirus son una extensa familia de virus que pueden causar enfermedades tanto en animales como en humanos.
+                En los humanos, se sabe que varios coronavirus causan infecciones respiratorias que pueden ir desde el resfriado común hasta enfermedades más graves como el síndrome respiratorio de Oriente Medio (MERS) y el síndrome respiratorio agudo severo (SRAS).
+                El coronavirus que se ha descubierto más recientemente causa la enfermedad por coronavirus COVID-19.
+            </a>
+        <h3>
+            Que es la covid-19?
+        </h3>
+        <a>
+                La COVID‑19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente.
+                Tanto este nuevo virus como la enfermedad que provoca eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.
+                Actualmente la COVID‑19 es una pandemia que afecta a muchos países de todo el mundo.
+            </a>
+    </div>
+    <hr>
+</div>
+<div class="container-lg">
+    <h3 class="text-center">Datos Mundiales</h3>
+    <hr>
+    <div class=" card-columns m-7 animated fadeIn ">
+
+        <div *ngIf="cargando==false" class="animated fadeIn">
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/new.png" alt="" width="27" height="27"> Nuevos Casos Confirmados:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{nuevosCasos | number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estos son los nuevos casos confirmados con covid-19 hasta el momento en el mundo.</small></p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/confirm.png" alt="" width="30" height="30">Casos Totales:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{totalCasos| number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estos son los casos totales confirmados con covid-19 hasta el momento en el mundo.</small></p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/skull.png" alt="" width="30" height="30"> Nuevas Muertes:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{nuevasMuertes| number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estas son las nuevas muertes confirmados por covid-19 hasta el momento en el mundo.</small></p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/death.png" alt="" width="30" height="30">Muertes Totales:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{totalMuertes| number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estas son las muertes totales confirmados por covid-19 hasta el momento en el mundo.</small></p>
+
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/heald.png" alt="" width="30" height="30"> Nuevos Recuperados:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{nuevosRecuperados| number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estos son los nuevos recuperados confirmados por covid-19 hasta el momento en el mundo.</small></p>
+
+
+                </div>
+            </div>
+            <div class="card" style="width: 22rem;">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <img src="assets/img/recovererd.png" alt="" width="30" height="30">Total Recuperados:</h5>
+                    <h2 class="card-subtitle mb-2 text-muted text-center">{{totalRecuperados| number}}</h2>
+                    <p class="card-text text-center"><small class="text-muted">Estos son los  recuperados totales confirmados por covid-19 hasta el momento en el mundo.</small></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HSGbs0GwJUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-md-6">
+            <div class="animated fadeIn">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Tt9G39gzCFw" frameborder="0" allow="accelerometer;
+                autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr>

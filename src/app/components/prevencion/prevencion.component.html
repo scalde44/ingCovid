@@ -1,0 +1,28 @@
+<hr>
+<div class="container-lg">
+    <h1>
+        Como prevenir y protegerse del covid-19?
+    </h1>
+    <hr>
+    <a>
+        Protéjase a sí mismo y a quienes lo rodean informándose y tomando las precauciones adecuadas.
+        Siga los consejos de su organismo de salud pública local.
+        Evitar las visitas innecesarias a los centros de atención médica permite que los sistemas sanitarios funcionen con mayor eficacia,
+        lo que redunda en su protección y en la de los demás.
+    </a>
+    <hr>
+    <a class="btn btn-danger btn-block " (click)="validar=!validar">Mostrar/Ocultar</a>
+    <hr>
+    <div class=" card-columns m-7 animated fadeIn ">
+        <!-- <div *ngFor="let imagen of imagenesPreventivas"> -->
+        <div class="card" style="width: 18rem;" *ngFor="let prevenir of prevencion;let i=index; ">
+            <img src="assets/img/{{imagenesPreventivas[i]}}.png" class="card-img-top " alt="... ">
+            <div class="card-body ">
+                <h5 class="card-title text-center ">{{prevenir}}</h5>
+                <p class="card-text " *ngIf=" validar ">{{descripcionPrevencion[i]}}</p>
+                <!-- <a href="# " class="btn btn-primary ">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
